@@ -1,25 +1,4 @@
-# from sqlalchemy import create_engine
-# from sqlalchemy import Column,Integer,String,Date
-# from sqlalchemy.ext.declarative import declarative_base
-# from sqlalchemy.orm import sessionmaker
 
-# engine=create_engine('mysql://root:admin@localhost:3306/sakila',echo=True)
-# # conn=engine.connect()
-# # result=conn.execute("select vsersion()")
-# # print(result.fetchone())
-# Base=declarative_base()
-# class City(Base):
-#     __tablename__="city"
-#     city_id = Column(Integer, primary_key=True)
-#     city = Column(String(50))
-#     country_id = Column(Integer)
-#     last_update = Column(Date)
-# DBSession=sessionmaker(engine)
-# session=DBSession()
-
-# info =session.query(City).filter(City.city_id>100).all()
-# for i in info:
-#     print(i.city)
 import requests
 import hashlib
 
@@ -32,12 +11,14 @@ data_login={
     'atype':'2'
 }
 res=requests.post(url,data_login)
+print("......开始登录.....")
 # 登录获取响应
 print(res.text)
 # 拿出响应信息
 info_luid=eval(res.text)['luid']
 info_ltoken=eval(res.text)['ltoken']
 print(info_luid,info_ltoken)
+
 # 点击实践中心，得出用户信息
 
 url_sj='http://121.31.66.157:8032//mobile/training/s_practice.xhtml'

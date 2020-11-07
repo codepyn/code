@@ -34,18 +34,6 @@ print(login_info)
 # 拿出pid
 pid_info=eval(login_info)[0]['id']
 print(pid_info)
-# 响应经纬度
-url_baidu='http://loc.map.baidu.com/sdk.php'
-data_map={
-    'trtm':'1603730914633',
-    'up':'7qG_86zlqqH68fGnuPHp8O7q7O72uuvosefx5emOourF3s6Nh7yd0NbT14TT0oXTyc7BxZiNmpfQyYva2Y3AzK7s-7O-peXhurS25qqz5rOrrOmv-eWtrPajr-C2rKG5mYnMk5uNmYvLyfiFmZHTz9Li24Db2J_XiOvf29WfgYduIyQRP354e3d2cCR0cSJ2eDoKKXo2aX13MDw7Mn9gZk4MHVMvUV8sUVcjBVQgdydOO01KGh84TBVDQxJgRjJAPTg8TXcyOz8yPD5kNjFjNS8oIyVsCnB_eSUhI3V1ISNMFkwbHxFLHxIDQQAZFlsSDxtZSVdaH1YGCXY1MGJugfn8-I2L5qSjr7b7oKTypey-7uX8-e2rveHq57OivaPVqN7cz5qSh4bbtaL708yExpaR2p7IxJeBwdm-lOfLybvPtLv1rO_u7ru3-uCj4LehqaOuCI5k|tp=3',
-    'bloc':'hELBzcOYwJvGx4lCiqAF9YdKNlHgum444BkN2Yk3NjTYMFDZkqJSHq9tPwt35NmeLh4qhE2gwQHbNiLMJqgIiHc5mzURjgW_rh0DRcqhbRBeyruYL4GLtAVYgbuwwjSbTHktt9O7zohI59_hJmhujyDzcNCBh-vK6QnSQEa7fsMx-56zOr0KP9L5v9ikPHB7v1RRZZvDFnkOlPeaGa6AMnZaHqB0HMwgMQzZqG-q2TGbBDUUwL2vhqodugYNv1pmCJ-Nba5qtku4C-15DgpyLcieEb9e7vmNIjRrZrmdq3qMrl4tdgERZ90v5zxxBReSWmjJpE2SiCXQSVTGAkd3EFH2zRSVhJdWtPgMGsgb6hK9P8XTNYiKgum_-dDkG73wPuvo6m5o5wqf|tp=4'
-}
-res_info=requests.post(url_baidu,data_map)
-print(res_info.text)
-# 地图定位
-url_localtion='http://api.map.baidu.com/sdkproxy/v2/lbs_androidsdk/geocoder/v2?location=23.476512%2C111.242004&coordtype=bd09ll&pois=1&output=json&from=android_map_sdk&token=5d9edkzT8ZW61vh0Ry4TNV3dJ%2B14VxjosPdjzm6uCkF8b3Ga3jbCbqj5JgZ2bBe5l2BPdGKOXtlApvrDHnP4Vt2ZIB4XoIbemeWbAtlfVwBc6suTTdTUPXhR94OAp8sqzTGhdSSve1%2F3gXGYAoPUbBbkhuJOxZhHE7vdmRg%2Fgth8B0E1rgJZDqadx5Xl&pcn=io.dcloud.H5C993F82&screen=1080%2C1920&cuid=D26A62D20ABD0F8704A71744E7C7574C%7C122599320661568&dpi=480%2C480&resid=02&appid=-1&mb=ASUS_I001DA&ctm=1603730970.502000&net=1&bduid=&channel=baidu&os=Android25&sv=4.3.1&sign=0b5a57f5986729c7e1da92669d01095a'
-print(requests.get(url_localtion).text)
 
 # 签到
 url_qd='http://121.31.66.157:8032//mobile/training/s_practice_qd.xhtml'
